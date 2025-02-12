@@ -168,10 +168,12 @@ function broadcastOnlineUsers() {
 // =====================================================
 const io = new SocketIOServer(server, {
   cors: {
-    origin: '*',
-    methods: ['GET', 'POST'],
+    origin: "https://formation-frontend-backoffice.onrender.com",
+    methods: ["GET", "POST"],
+    // Vous pouvez aussi ajouter allowedHeaders ou credentials si nécessaire
   },
 });
+
 
 // Définition du namespace "/video"
 const videoNamespace = io.of('/video');
